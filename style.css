@@ -35,3 +35,21 @@
   height: 100px;
   display: inline-block;
 }
+
+#pixel-board {
+  border-color: black;
+  border-style: solid;
+  width: 526px;
+  height: 526px;
+  padding: 2px;
+}
+
+.pixel {
+  display: inline-flex;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+}

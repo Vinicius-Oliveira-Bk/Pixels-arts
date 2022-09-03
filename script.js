@@ -27,3 +27,18 @@ function generateColor2() {
   }
   return document.getElementById("cor3").style.backgroundColor = color;
 }
+
+// Requisito 5:
+
+// let colorPalette = JSON.parse(localStorage.getItem('colorPalette')) || [];
+// document.querySelector('button-random-color').onclick = function() {
+//   let colorChange = document.querySelector('button-random-color');
+
+//   colorPalette.push(colorChange);
+//   localStorage.setItem('colorPalette', JSON.stringify(colorPalette));
+// }
+//-------------------------------------------
+
+// Requisto 6:
+
+
