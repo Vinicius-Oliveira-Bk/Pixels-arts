@@ -53,3 +53,13 @@
   height: 40px;
   background-color: white;
 }
+
+.selected {
+  background-color: black;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}

@@ -41,4 +41,6 @@ function generateColor2() {
 
 // Requisto 6:
 
+const blackBlock = document.getElementById("bloco-preto");
 
+blackBlock.classList.add('color');
