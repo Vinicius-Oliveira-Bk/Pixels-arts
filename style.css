@@ -23,6 +23,18 @@
   border-color: black;
 }
 
+#clear-board {
+  display: block;
+  width: 200px;
+  height: 20px;
+  position: relative;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+}
+
 #color-palette {
   display: inline-block;
 }

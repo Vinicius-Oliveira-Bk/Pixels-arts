@@ -28,19 +28,45 @@ function generateColor2() {
   return document.getElementById("cor3").style.backgroundColor = color;
 }
 
+const cor0 = document.querySelector('#cor0');
+const cor1 = document.querySelector('#cor1');
+const cor2 = document.querySelector('#cor2');
+const cor3 = document.querySelector('#cor3');
+
+const cores = [cor0, cor1, cor2, cor3];
+
+let pixels = document.querySelectorAll('.pixel');
+
 // Requisito 5:
+/*
+window.addEventListener('load', function () {
+  let reLoad = JSON.parse(localStorage.getItem('colorPalette'));
 
-// let colorPalette = JSON.parse(localStorage.getItem('colorPalette')) || [];
-// document.querySelector('button-random-color').onclick = function() {
-//   let colorChange = document.querySelector('button-random-color');
-
-//   colorPalette.push(colorChange);
-//   localStorage.setItem('colorPalette', JSON.stringify(colorPalette));
-// }
+  cor1.style.backgroundColor = reLoad[0]
+  cor2.style.backgroundColor = reLoad[1]
+  cor3.style.backgroundColor = reLoad[2]
+}) */
 //-------------------------------------------
 
-// Requisto 6:
+cor0.classList.add('color');
 
-const blackBlock = document.getElementById("bloco-preto");
+function guardaCor() {
+  for (let index = 0; index < cores.length; index += 1) {
+    if (cores[index].classList.contains('selected')) {
+      const corClicada = cores[index].style.backgroundColor;
+      return corClicada;
+    }
+  }
+}
 
-blackBlock.classList.add('color');
+for (let index = 0; index < pixels.length; index += 1) {
+  pixels[index].addEventListener('click', function(event){
+    event.target.style.backgroundColor = guardaCor();
+ })
+}
+
+function limpaQuadro() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+}

@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <title>Project Pixels Arts</title>
 </head>
 <body>
     <h1 id="title">Paleta de Cores</h1>
     <button id="button-random-color" onclick="generateColor(), generateColor1(), generateColor2()">Cores aleatórias</button>
     <div id="color-palette">
-        <div class="selected" id="bloco-preto" style="background-color: black;"></div>
+        <div class="selected" id="cor0" style="background-color: black;"></div>
         <div class="color" id="cor1" style="background-color: red;"></div>
         <div class="color" id="cor2" style="background-color: blue;"></div>
         <div class="color" id="cor3" style="background-color: green;"></div>
     </div>
+    <br><br>
+    <button id="clear-board" onclick="limpaQuadro()">Limpar</button>
     <br><br>
     <div id="pixel-board">
         <div class="pixel"></div>
@@ -45,5 +46,6 @@
         <div class="pixel"></div>
         <div class="pixel"></div>
     </div>
+    <script src="script.js" defer></script>
 </body>
 </html>
