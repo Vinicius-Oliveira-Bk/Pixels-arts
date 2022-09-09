@@ -35,7 +35,7 @@ const cor3 = document.querySelector('#cor3');
 
 const cores = [cor0, cor1, cor2, cor3];
 
-let pixels = document.querySelectorAll('.pixel');
+const pixels = document.getElementsByClassName('pixel');
 
 // Requisito 5:
 /*
@@ -46,9 +46,44 @@ window.addEventListener('load', function () {
   cor2.style.backgroundColor = reLoad[1]
   cor3.style.backgroundColor = reLoad[2]
 }) */
-//-------------------------------------------
+
+// Requisito 8 --------------------------------
 
 cor0.classList.add('color');
+
+// Requisito 9 --------------------------------
+
+cor0.addEventListener('click', function() {
+  cor1.classList.remove('selected');
+  cor2.classList.remove('selected');
+  cor3.classList.remove('selected');
+
+  cor0.classList.add('selected');
+});
+
+cor1.addEventListener('click', function() {
+  cor0.classList.remove('selected');
+  cor2.classList.remove('selected');
+  cor3.classList.remove('selected');
+
+  cor1.classList.add('selected');
+});
+
+cor2.addEventListener('click', function() {
+  cor0.classList.remove('selected');
+  cor1.classList.remove('selected');
+  cor3.classList.remove('selected');
+
+  cor2.classList.add('selected');
+});
+
+cor3.addEventListener('click', function() {
+  cor0.classList.remove('selected');
+  cor1.classList.remove('selected');
+  cor2.classList.remove('selected');
+
+  cor3.classList.add('selected');
+});
 
 function guardaCor() {
   for (let index = 0; index < cores.length; index += 1) {
@@ -60,13 +95,15 @@ function guardaCor() {
 }
 
 for (let index = 0; index < pixels.length; index += 1) {
-  pixels[index].addEventListener('click', function(event){
+  pixels[index].addEventListener('click', function (event) {
     event.target.style.backgroundColor = guardaCor();
- })
+  })
 }
+
+// Requisito 11 ---------------------------------
 
 function limpaQuadro() {
   for (let index = 0; index < pixels.length; index += 1) {
-    pixels[index].style.backgroundColor = 'white';
+    pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
